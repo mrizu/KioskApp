@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Hamburger",
+    "basePrice": 4.00,
+    "image": "...",
+    "type": "burger"
+  },
+  {
+    "name": "Cheeseburger",
+    "basePrice": 4.50,
+    "image": "...",
+    "type": "burger"
+  }
+]
