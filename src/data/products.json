@@ -1,11 +1,13 @@
 [
   {
+    "id": 1,
     "name": "Hamburger",
     "basePrice": 4.00,
     "image": "...",
     "type": "burger"
   },
   {
+    "id": 2,
     "name": "Cheeseburger",
     "basePrice": 4.50,
     "image": "...",

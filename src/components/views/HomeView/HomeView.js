@@ -18,9 +18,15 @@ class HomeView extends Component {
   render() {
     return(
       <>
-        <Logo />
-        <button onClick={() => this.setState({color: "blue"})}>test</button>
-        home {this.state.color}
+      <Link style={{textDecoration: "none", color: "white"}} to={'/choose'}>
+        <Container>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <Clearfix />
+          <H1>Welcome!</H1>
+        </Container>
+      </Link>
       </>
     );
   }
