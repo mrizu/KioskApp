@@ -22,10 +22,16 @@ overflow: auto;
 
 function App() {
   return (
-    <>
-      <p>test xdsaaaaaaaaaaaaaaaaaaad</p>
-      <HomeView />
-    </>
+    <Container>
+      <BrowserRouter>
+        <Routes>
+          <Route path = '/' element={<HomeView />}/>
+          <Route path = '/choose' element={<TakeoutChoiceView />}/>
+          <Route path = '/menu' element = {<MenuView />}/>
+          <Route path = '/item/:id' element = {<ProductView />}/>
+        </Routes>
+      </BrowserRouter>
+    </Container>
   );
 }
 
