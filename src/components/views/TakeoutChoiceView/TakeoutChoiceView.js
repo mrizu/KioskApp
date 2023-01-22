@@ -9,14 +9,13 @@ import DineInImage from "./dineIn.png"
 import {Link} from "react-router-dom";
 
 const LogoContainer = styled.div`
-  padding: 80px 0;
+  padding: 80px 0 ;
   margin-left: 50%;
   transform: translateX(-50%);
   float: left;
 `;
 
-class TakeoutChoiceView extends Component {
-  render() {
+export default function TakeoutChoiceView() {
     return (
       <>
         <LogoContainer>
@@ -42,7 +41,4 @@ class TakeoutChoiceView extends Component {
 
       </>
     )
-  }
 }
-
-export default TakeoutChoiceView;

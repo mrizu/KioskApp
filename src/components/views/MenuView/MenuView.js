@@ -1,40 +1,41 @@
-import {Component} from "react";
 import MenuItemsManager from "../../../elements/MenuItemsManager/MenuItemsManager";
-import BigButton from "../../base/BigButton/BigButton";
-import MenuItem from "../../Menu/MenuItem/MenuItem";
-
-class MenuView extends Component {
-  constructor() {
-    super();
-    this.state = {
-      menuItems: []
-    }
-  }
+import {useEffect, useState} from "react";
+import MenuProduct from "../../Menu/MenuProduct/MenuProduct";
+import {Link} from "react-router-dom";
+import ProductView from "../ProductView/ProductView";
+import Clearfix from "../../base/Clearfix/Clearfix";
+import styled from "styled-components";
+import { Formik } from 'formik';
 
 
-  componentDidMount() {
-    this.loadMenuItems();
-  }
+const H1 = styled.h1`
+  font-size: 50px;
+  text-align: center;
+`;
 
-  loadMenuItems() {
-    let menuItems = MenuItemsManager.getItems();
-    console.log(menuItems);
-    this.setState({menuItems: menuItems});
-  }
+export default function MenuView(){
+  let [menuProducts, setMenuProducts] = useState([])
 
-  render() {
-    return(
-      <>
-        Menu view {this.state.menuItems.length}
+  useEffect(() => {
+    setMenuProducts(MenuItemsManager.getItems());
+  }, [])
 
-        {
-          this.state.menuItems.map(
-            menuItem => <MenuItem key={menuItem.id} text={menuItem.name} price={menuItem.basePrice} imageSrc="" />
-          )
-        }
-      </>
-    )
-  }
+  return(
+    <>
+      <H1>Menu</H1>
+      <Clearfix />
+      {
+        menuProducts.map(
+            menuProduct => <Link key={menuProduct.id} to={'/item/' + menuProduct.id} element={<ProductView />}>
+              <MenuProduct key={menuProduct.id}
+                           text={menuProduct.name}
+                           type={menuProduct.type}
+                           price={menuProduct.basePrice}
+                           imageSrc={menuProduct.image} />
+            </Link>
+        )
+      }
+    </>
+  )
+
 }
-
-export default MenuView;

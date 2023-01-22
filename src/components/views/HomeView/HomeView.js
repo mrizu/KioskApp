@@ -5,17 +5,7 @@ import Logo from "../../base/Logo/Logo";
 
 
 
-class HomeView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {color: "red"};
-  }
-
-  test() {
-    this.setState({color: "blue"});
-  }
-
-  render() {
+export default function HomeView(){
     return(
       <>
       <Link style={{textDecoration: "none", color: "white"}} to={'/choose'}>
@@ -29,9 +19,4 @@ class HomeView extends Component {
       </Link>
       </>
     );
-  }
-
 }
-
-
-export default HomeView;

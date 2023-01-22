@@ -6,6 +6,7 @@ import HomeView from "./components/views/HomeView/HomeView";
 import MenuView from "./components/views/MenuView/MenuView";
 import MenuItem from "./elements/MenuItem/MenuItem";
 import TakeoutChoiceView from "./components/views/TakeoutChoiceView/TakeoutChoiceView";
+import ProductView from "./components/views/ProductView/ProductView";
 
 const Container = styled.div`
   width: 720px;

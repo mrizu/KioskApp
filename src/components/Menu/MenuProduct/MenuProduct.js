@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const Container = styled.button`
   width: 200px;
-  height: 360px;
+  height: 270px;
   background-color: white;
   color: black;
   border: 0;
@@ -25,7 +24,7 @@ const Container = styled.button`
   }
 `;
 
-const Text = styled.div`
+const ProductName = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -42,19 +41,27 @@ const Price = styled.span`
   font-size: 18px;
 `
 
+const ProductType = styled.span`
+  position: absolute;
+  top: 8px;
+  font-size: 18px;
+  left: 8px
+`
+
 const Img = styled.img`
-  width: 100%;
+  width: 140%;
 `;
 
 
-const MenuItem = (props) => {
+const MenuProduct = (props) => {
   return (
     <Container onClick={() => props.onClick ? props.onClick() : null}>
       <Img src={props.imageSrc} />
-      <Text>{props.text}</Text>
+      <ProductName>{props.text}</ProductName>
+      <ProductType>{props.type}</ProductType>
       <Price>${props.price.toFixed(2)}</Price>
     </Container>
   )
 }
 
-export default MenuItem;
+export default MenuProduct;

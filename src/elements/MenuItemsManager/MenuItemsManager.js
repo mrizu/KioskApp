@@ -24,6 +24,10 @@ class MenuItemsManager {
     return items;
   }
 
+  static getItemById(id){
+    return new MenuItem(itemsData[id]);
+  }
+
 }
 
 export default MenuItemsManager;

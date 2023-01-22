@@ -1,16 +1,44 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Hamburger",
     "basePrice": 4.00,
-    "image": "...",
-    "type": "burger"
+    "image": "https://i.imgur.com/9r7SX79.png",
+    "type": "Burger"
+  },
+  {
+    "id": 1,
+    "name": "Cheeseburger",
+    "basePrice": 4.50,
+    "image": "https://i.imgur.com/uHyEqSy.png",
+    "type": "Burger"
   },
   {
     "id": 2,
-    "name": "Cheeseburger",
-    "basePrice": 4.50,
-    "image": "...",
-    "type": "burger"
+    "name": "Coca-cola",
+    "basePrice": 2.00,
+    "image": "https://i.imgur.com/xvZCGK1.png",
+    "type": "Drink"
+  },
+  {
+    "id": 3,
+    "name": "Fries",
+    "basePrice": 2.50,
+    "image": "https://i.imgur.com/V5SPreS.png",
+    "type": "Side dish"
+  },
+  {
+    "id": 4,
+    "name": "Onion Rings",
+    "basePrice": 2.50,
+    "image": "https://i.imgur.com/2miTQty.png",
+    "type": "Side dish"
+  },
+  {
+    "id": 5,
+    "name": "Sprite",
+    "basePrice": 2.00,
+    "image": "https://i.imgur.com/lIEfYzM.png",
+    "type": "Side dish"
   }
 ]
