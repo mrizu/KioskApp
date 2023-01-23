@@ -14,6 +14,11 @@ class MenuItem {
     this.type = data.type
     this.additionalIngredients = data.additionalIngredients;
   }
+
+  getProductType(){
+    return this.type;
+  }
+
 }
 
 export default MenuItem;

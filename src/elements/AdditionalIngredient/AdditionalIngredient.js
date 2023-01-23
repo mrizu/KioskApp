@@ -4,24 +4,33 @@ class AdditionalIngredient {
   maxServings;
   numberOfServings;
 
-  constructor(name, pricePerServing, maxServings) {
-    this.name = name;
-    this.pricePerServing = pricePerServing;
-    this.maxServings = maxServings;
+  constructor(data) {
+    this.name = data.name;
+    this.pricePerServing = data.price;
+    this.maxServings = 5;
     this.numberOfServings = 0;
   }
 
   add() {
-    this.numberOfServings++;
+    if (this.numberOfServings < this.maxServings){
+      this.numberOfServings++;
+    }
   }
 
   delete() {
-    this.numberOfServings--;
+    if (this.numberOfServings > 0){
+      this.numberOfServings--;
+    }
   }
 
   getPrice() {
     return this.numberOfServings * this.pricePerServing;
   }
+
+  getNumberOfServings(){
+    return this.numberOfServings;
+  }
+
 }
 
 export default AdditionalIngredient;
