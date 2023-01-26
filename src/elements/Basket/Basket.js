@@ -38,7 +38,6 @@ class Basket {
     console.log("BASKET CONTENT:")
     let loadedItems = localStorage.getItem("basketItems");
     if (!loadedItems) {
-      loadedItems = [];
       Basket.items = [];
       return;
     }
@@ -49,8 +48,9 @@ class Basket {
     console.log(loadedItems)
 
     Basket.items = loadedItems;
-    return;
   }
+
+
 
 
 }

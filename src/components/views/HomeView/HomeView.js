@@ -1,9 +1,9 @@
 import React from "react";
-import {Component} from "react";
 import styled from "styled-components";
 import Logo from "../../base/Logo/Logo";
 import Clearfix from "../../base/Clearfix/Clearfix";
 import {Link} from "react-router-dom";
+import AdminView from "../AdminView/AdminView";
 
 const LogoContainer = styled.div`
   padding: 80px 0 40px;
@@ -23,6 +23,10 @@ const Container = styled.div`
   cursor: default;
 `;
 
+const AdminButton = styled.div`
+
+`;
+
 export default function HomeView(){
     return(
       <>
@@ -33,8 +37,10 @@ export default function HomeView(){
           </LogoContainer>
           <Clearfix />
           <H1>Welcome!</H1>
+          <Link to='/admin' element={<AdminView />}><AdminButton>admin</AdminButton></Link>
         </Container>
       </Link>
+
       </>
     );
 }

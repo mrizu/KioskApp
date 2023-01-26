@@ -52,10 +52,6 @@ const H1 = styled.h1`
   font-weight: bold;
 `;
 
-const Table = styled.table`
-  width: 200px;
-`;
-
 const AdditionalIngredientsContainer = styled.div`
   //width: 100%;
   float: left;
@@ -71,10 +67,9 @@ const Price = styled.div`
 const DeleteButton = styled.button`
   position: absolute;
   top: 50%;
-  right: 0px;
-transform: translateY(-50%);
-  //border: 0;
-width: 38px;
+  right: 0;
+  transform: translateY(-50%);
+  width: 38px;
   height: 38px;
   font-size: 20px;
   font-weight: bold;
@@ -116,6 +111,11 @@ const Button = styled.button`
   }
 `;
 
+const EmptyBasketText = styled.div`
+  font-size: 30px;
+  padding-top: 10px;
+`;
+
 
 const ImageSection = styled.div`
   width: 200px;
@@ -147,7 +147,18 @@ export default function BasketView(){
   const handleBasketClearClick = () => {
     Basket.clearBasket()
     forceUpdate();
+  }
 
+  const getBasketPrice = () => {
+    let sum = 0;
+    Basket.items.map(basketItem => {
+      sum += parseFloat(basketItem.fullPrice);
+      })
+    return sum.toFixed(2);
+  }
+
+  const isBasketEmpty = () => {
+    return Basket.items.length === 0;
   }
 
   return(
@@ -165,7 +176,7 @@ export default function BasketView(){
                 <ProductName>{basketItem.menuItem.name}</ProductName>
                 <Clearfix />
                 <AdditionalIngredientsContainer>
-                  {basketItem.additionalIngredients.map((ingredient, index) =>
+                  {basketItem.additionalIngredients.map((ingredient) =>
                     ingredient.numberOfServings > 0
                       ?
                         <SmallText><b>Extra</b> {ingredient.name} x {ingredient.numberOfServings}</SmallText>
@@ -180,7 +191,14 @@ export default function BasketView(){
           )
         }
         <ButtonsContainer>
-          <Link to='/final' element={<FinalView />}><Button style={{float: "right"}}>Pay</Button></Link>
+          {!isBasketEmpty()
+            ?
+          <Link to='/final' element={<FinalView />}>
+            <Button onClick={() => isBasketEmpty()} style={{float: "right"}}>Pay(${getBasketPrice()})</Button>
+          </Link>
+            :
+            <EmptyBasketText style={{float: "right"}}>Basket is empty</EmptyBasketText>
+          }
           <Link to='/menu' element={<MenuView />}><Button>Back</Button></Link>
         </ButtonsContainer>
       </BaskerContainer>
