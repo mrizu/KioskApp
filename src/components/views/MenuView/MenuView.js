@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import ProductView from "../ProductView/ProductView";
 import Clearfix from "../../base/Clearfix/Clearfix";
 import styled from "styled-components";
-import { Formik } from 'formik';
+import BasketButton from "../../base/BasketButton/BasketButton";
 
 
 const H1 = styled.h1`
@@ -23,6 +23,7 @@ export default function MenuView(){
   return(
     <>
       <H1>Menu</H1>
+      <BasketButton/>
       <Clearfix />
       {
         menuProducts.map(

@@ -23,10 +23,6 @@ class AdditionalIngredient {
     }
   }
 
-  getPrice() {
-    return this.numberOfServings * this.pricePerServing;
-  }
-
   getNumberOfServings(){
     return this.numberOfServings;
   }
