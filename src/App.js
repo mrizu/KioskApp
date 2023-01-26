@@ -20,6 +20,7 @@ const Container = styled.div`
   left: 50%;
   background: brown;
   transform: translateX(-50%);
+  overflow-x: hidden;
   float: left;
 `;
 

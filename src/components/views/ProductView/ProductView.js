@@ -8,7 +8,7 @@ import Basket from "../../../elements/Basket/Basket";
 import BasketButton from "../../base/BasketButton/BasketButton";
 
 const ProductContainer = styled.div`
-  width: 80%;
+  width: 600px;
   height: 100%;
   padding: 40px 40px;
   margin-left: 50%;
@@ -16,8 +16,20 @@ const ProductContainer = styled.div`
   float: left;
   background-color: white;
   color: black;
+  font-size: 20px;
+  padding-bottom: calc(40px + 300px); /* extra 100px for ButtonsContainer */
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 `;
+
+const ProductName = styled.h1`
+  font-family: 'Lovinn', sans-serif;
+
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+`
 
 const Img = styled.img`
   width: 100%;
@@ -39,16 +51,38 @@ const ButtonsContainer = styled.div`
   padding: 0 40px;
 `;
 
-const AddButton = styled.button`
-  position: absolute;
-  padding: 20px 30px;
-  right: 8px;
+const Button = styled.button`
+  min-width: 170px;
   font-size: 24px;
   font-weight: bold;
-  background-color: orange;
+  background-color: #ff8c00;
   color: white;
   border-radius: 7px;
-  float:right
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #cc7000;
+  }
+
+  ${props => props.isInAnimation ? "opacity: 0;" : "opacity: 1;"}
+`;
+
+const FeedbackInfo = styled.div`
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  text-align: center;
+  font-size: 24px;
+  transition: 0.5s;
+  pointer-events: ${props => props.isVisible ? "auto" : "none;"};
+  user-select: none;
+
+  ${props => props.isVisible ? "opacity: 1;" : "opacity: 0;"}
 `;
 
 const IngredientButton = styled.button`
@@ -66,6 +100,10 @@ const IngredientButton = styled.button`
 
 const IngredientsList = styled.li`
 
+`;
+
+const Table = styled.table`
+  width: 100%;
 `;
 
 
