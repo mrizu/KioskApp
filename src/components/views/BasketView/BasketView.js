@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Basket from "../../../elements/Basket/Basket";
-import {useEffect, useCallback, useState} from "react";
+import {useCallback, useState, useMemo} from "react";
 import Clearfix from "../../base/Clearfix/Clearfix";
 import {Link} from "react-router-dom";
 import MenuView from "../MenuView/MenuView";
@@ -131,13 +131,9 @@ export default function BasketView(){
   const [, updateState] = useState();
   const forceUpdate = useCallback(() => updateState({}), []);
 
-  useEffect(() => {
+  useMemo(() => {
     Basket.loadBasket();
-    setTimeout(() => {
-      forceUpdate();
-    }, 100);
-
-  }, [forceUpdate])
+  }, [])
 
   const handleClick = (index) => {
     Basket.removeItemById(index);

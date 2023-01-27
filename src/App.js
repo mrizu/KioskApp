@@ -10,6 +10,7 @@ import FinalView from "./components/views/FinalView/FinalView";
 import AdminView from "./components/views/AdminView/AdminView";
 import AdminStatisticsView from "./components/views/AdminStatisticsView/AdminStatisticsView";
 import AdminEditView from "./components/views/AdminEditView/AdminEditView";
+import AdminEditProductView from "./components/views/AdminEditProductView/AdminEditProductView";
 
 const Container = styled.div`
   width: 720px;
@@ -35,11 +36,10 @@ function App() {
           <Route path = '/item/:id' element = {<ProductView />}/>
           <Route path = '/basket' element = {<BasketView />}/>
           <Route path = '/final' element = {<FinalView />}/>
-          {/*<Route path = '/admin/stats' element = {<AdminStatisticsView />}/>*/}
-          <Route path = '/admin' element = {<AdminView />}>
-            <Route path = 'stats' element = {<AdminStatisticsView />}/>
-            <Route path = 'edit' element = {<AdminEditView />}/>
-          </Route>
+          <Route path = '/admin' element = {<AdminView />}/>
+          <Route path = '/admin/edit' element = {<AdminEditView />}/>
+          <Route path = '/admin/stats' element = {<AdminStatisticsView />}/>
+          <Route path = '/admin/editProduct/:id' element = {<AdminEditProductView />}/>
         </Routes>
       </BrowserRouter>
     </Container>

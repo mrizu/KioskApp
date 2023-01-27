@@ -24,23 +24,28 @@ const Container = styled.div`
 `;
 
 const AdminButton = styled.div`
-
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  background-color: wheat;
+  border-radius: 3px;
+  padding: 6px;
+  float:right;
 `;
 
 export default function HomeView(){
     return(
       <>
-      <Link style={{textDecoration: "none", color: "white"}} to={'/choose'}>
-        <Container>
-          <LogoContainer>
-            <Logo />
-          </LogoContainer>
-          <Clearfix />
-          <H1>Welcome!</H1>
-          <Link to='/admin' element={<AdminView />}><AdminButton>admin</AdminButton></Link>
-        </Container>
-      </Link>
-
+        <Link style={{textDecoration: "none", color: "white"}} to={'/choose'}>
+          <Container>
+            <LogoContainer>
+              <Logo />
+            </LogoContainer>
+            <Clearfix />
+            <H1>Welcome!</H1>
+          </Container>
+        </Link>
+        <Link to='/admin' element={<AdminView />}><AdminButton>admin</AdminButton></Link>
       </>
     );
 }
