@@ -1,5 +1,8 @@
 import {useLayoutEffect, useReducer} from "react";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+import HomeView from "../HomeView/HomeView";
+import Basket from "../../../elements/Basket/Basket";
 
 const Container = styled.div`
   width: 600px;
@@ -12,11 +15,30 @@ const Container = styled.div`
   background-color: white;
   color: black;
   font-size: 40px;
-  padding-bottom: calc(40px + 100px); /* extra 100px for ButtonsContainer */
+  padding-bottom: calc(40px + 100px);
   border-radius: 15px;
   position: relative;
   text-align: center;
 `;
+
+const FinalContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  //background-color: magenta;
+  float: left;
+`;
+
+const ClickingArea = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+
+`;
+
 
 const INITIAL_STATE = {
   stage: 0,
@@ -41,6 +63,7 @@ const reducer = (state, action) => {
         paymentStage: 2
       }
     case "PAYMENT_FINISHED":
+      Basket.clearBasket();
       return {
         stage: 1,
         paymentStage: 2
@@ -107,8 +130,14 @@ export default function FinalView(){
 
           :
             <>
-              <h1>Thank you!</h1>
-              <h2>Your order number is: {generateNumber()}</h2>
+
+                <FinalContainer>
+                  <Link style={{textDecoration: "none", color:"black"}} to={'/'} element={<HomeView/>}>
+                    <ClickingArea />
+                  </Link>
+                  <h1>Thank you!</h1>
+                  <h2>Your order number is: {generateNumber()}</h2>
+                </FinalContainer>
             </>
         }
 

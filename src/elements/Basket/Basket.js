@@ -19,7 +19,7 @@ class Basket {
   }
 
   static clearBasket() {
-    localStorage.clear("basketItems");
+    localStorage.removeItem("basketItems");
     Basket.loadBasket();
   }
 
@@ -35,7 +35,6 @@ class Basket {
   }
 
   static loadBasket() {
-    console.log("BASKET CONTENT:")
     let loadedItems = localStorage.getItem("basketItems");
     if (!loadedItems) {
       Basket.items = [];

@@ -20,7 +20,6 @@ const BaskerContainer = styled.div`
   padding-bottom: calc(40px + 100px); /* extra 100px for ButtonsContainer */
   border-radius: 15px;
   position: relative;
-  //overflow-y: auto;
 `;
 
 const SmallText = styled.p`
@@ -53,7 +52,6 @@ const H1 = styled.h1`
 `;
 
 const AdditionalIngredientsContainer = styled.div`
-  //width: 100%;
   float: left;
 `;
 
@@ -147,9 +145,9 @@ export default function BasketView(){
 
   const getBasketPrice = () => {
     let sum = 0;
-    Basket.items.map(basketItem => {
-      sum += parseFloat(basketItem.fullPrice);
-      })
+    for (let i = 0; i<Basket.items.length; i++){
+      sum += parseFloat(Basket.items[i].fullPrice);
+    }
     return sum.toFixed(2);
   }
 

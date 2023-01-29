@@ -49,12 +49,3 @@ const BigButton = (props) => {
 }
 
 export default BigButton;
-
-// export default function BigButton (text, imageSrc) {
-//   return (
-//     <Container onClick={}>
-//       <Img src={imageSrc} />
-//       <Text>{text}</Text>
-//     </Container>
-//   )
-// }

@@ -4,11 +4,6 @@ import AdditionalIngredient from "./AdditionalIngredient";
 class AdditionalIngredientsManager {
     static itemsData;
 
-    static loadFromFile() {
-        // ladujemy z json do memory przegladarki
-        // localStorage.setItem("ingredientsData", jsondata);
-    }
-
     static loadItemsData() {
         AdditionalIngredientsManager.itemsData = itemsData;
     }

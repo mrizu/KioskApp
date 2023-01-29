@@ -6,7 +6,6 @@ const LogoImg = styled.img`
   float: left;
 `;
 
-// logo
 export default function Logo() {
   return(
     <>

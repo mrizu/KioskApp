@@ -145,8 +145,6 @@ export default function ProductView(){
 
   const addToBasket = (price) => {
     Basket.addItem(product, additionalIngredients, price);
-    console.log('basket products')
-    console.log(Basket.items)
 
     setIsInAnimation(true);
 

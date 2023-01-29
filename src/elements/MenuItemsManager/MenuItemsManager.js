@@ -12,8 +12,6 @@ class MenuItemsManager {
       localStorage.setItem("itemsData", JSON.stringify(itemsData));
     } else {
       MenuItemsManager.itemsData = JSON.parse(localStorage.getItem("itemsData"));
-      console.log(MenuItemsManager.itemsData);
-
     }
   }
 
@@ -47,7 +45,6 @@ class MenuItemsManager {
     }
     MenuItemsManager.itemsData = items;
     localStorage.setItem("itemsData", JSON.stringify(items));
-    console.log(MenuItemsManager.itemsData);
   }
 }
 

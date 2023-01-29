@@ -59,7 +59,7 @@ const MenuProduct = (props) => {
       <Img src={props.imageSrc} />
       <ProductName>{props.text}</ProductName>
       <ProductType>{props.type}</ProductType>
-      <Price>${props.price.toFixed(2)}</Price>
+      <Price>${props.price ? props.price.toFixed(2) : 0}</Price>
     </Container>
   )
 }

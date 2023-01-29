@@ -1,5 +1,5 @@
 import MenuItemsManager from "../../../elements/MenuItemsManager/MenuItemsManager";
-import {useEffect, useState} from "react";
+import { useMemo, useState} from "react";
 import MenuProduct from "../../Menu/MenuProduct/MenuProduct";
 import {Link} from "react-router-dom";
 import ProductView from "../ProductView/ProductView";
@@ -16,7 +16,7 @@ const H1 = styled.h1`
 export default function MenuView(){
   let [menuProducts, setMenuProducts] = useState([])
 
-  useEffect(() => {
+  useMemo(() => {
     setMenuProducts(MenuItemsManager.getItems());
   }, [])
 

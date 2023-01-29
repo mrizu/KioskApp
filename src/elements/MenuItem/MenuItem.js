@@ -17,12 +17,6 @@ class MenuItem {
     return this.type;
   }
 
-  // getAsJson()  {
-  //   return {
-  //     id: this.id, name: this.name, basePrice: this.basePrice, image: this.image, type: this.type
-  //   }
-  // }
-
 }
 
 export default MenuItem;

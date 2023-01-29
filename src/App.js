@@ -11,6 +11,8 @@ import AdminView from "./components/views/AdminView/AdminView";
 import AdminStatisticsView from "./components/views/AdminStatisticsView/AdminStatisticsView";
 import AdminEditView from "./components/views/AdminEditView/AdminEditView";
 import AdminEditProductView from "./components/views/AdminEditProductView/AdminEditProductView";
+import {createContext} from "react";
+import {useState} from "react";
 
 const Container = styled.div`
   width: 720px;
@@ -25,9 +27,13 @@ const Container = styled.div`
   float: left;
 `;
 
+export const IsAccessGranted = createContext(false);
+
 function App() {
+  const [isAdmin, setIsAdmin] = useState(false);
   return (
     <Container>
+      <IsAccessGranted.Provider value={{isAdmin, setIsAdmin}}>
       <BrowserRouter>
         <Routes>
           <Route path = '/' element={<HomeView />}/>
@@ -42,6 +48,7 @@ function App() {
           <Route path = '/admin/editProduct/:id' element = {<AdminEditProductView />}/>
         </Routes>
       </BrowserRouter>
+      </IsAccessGranted.Provider>
     </Container>
   );
 }
