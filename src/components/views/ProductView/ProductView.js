@@ -7,6 +7,10 @@ import AdditionalIngredientsManager from "../../../elements/AdditionalIngredient
 import Basket from "../../../elements/Basket/Basket";
 import BasketButton from "../../base/BasketButton/BasketButton";
 
+const buttonColor = `
+  background-color: #ff8c00;
+`;
+
 const ProductContainer = styled.div`
   width: 600px;
   height: 100%;
@@ -24,8 +28,6 @@ const ProductContainer = styled.div`
 `;
 
 const ProductName = styled.h1`
-  font-family: 'Lovinn', sans-serif;
-
   font-size: 48px;
   font-weight: bold;
   text-align: center;
@@ -55,7 +57,7 @@ const Button = styled.button`
   min-width: 170px;
   font-size: 24px;
   font-weight: bold;
-  background-color: #ff8c00;
+  ${buttonColor};
   color: white;
   border-radius: 7px;
   padding: 16px;
@@ -89,7 +91,7 @@ const IngredientButton = styled.button`
   width: 30px;
   height: 30px;
   font-weight: bold;
-  background-color: #ff8c00;
+  ${buttonColor};
   color: white;
   border-radius: 7px;
   font-size: 20px;
@@ -98,8 +100,9 @@ const IngredientButton = styled.button`
   margin: 0 8px;
 `;
 
-const IngredientsList = styled.li`
 
+const IngredientsList = styled.li`
+  width: 100%;
 `;
 
 const Table = styled.table`

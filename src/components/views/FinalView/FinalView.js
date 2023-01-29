@@ -25,7 +25,6 @@ const FinalContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  //background-color: magenta;
   float: left;
 `;
 

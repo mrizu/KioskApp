@@ -1,4 +1,3 @@
-import {Component} from "react";
 import styled from "styled-components";
 import Logo from "../../base/Logo/Logo";
 import Clearfix from "../../base/Clearfix/Clearfix";
