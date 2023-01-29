@@ -6,6 +6,7 @@ import ProductView from "../ProductView/ProductView";
 import Clearfix from "../../base/Clearfix/Clearfix";
 import styled from "styled-components";
 import BasketButton from "../../base/BasketButton/BasketButton";
+import CenteredSection from "../../base/CenteredSection/CenteredSection";
 
 
 const H1 = styled.h1`
@@ -25,17 +26,21 @@ export default function MenuView(){
       <H1>Menu</H1>
       <BasketButton/>
       <Clearfix />
-      {
-        menuProducts.map(
-            menuProduct => <Link key={menuProduct.id} to={'/item/' + menuProduct.id} element={<ProductView />}>
-              <MenuProduct key={menuProduct.id}
-                           text={menuProduct.name}
-                           type={menuProduct.type}
-                           price={menuProduct.basePrice}
-                           imageSrc={menuProduct.image} />
-            </Link>
-        )
-      }
+      <CenteredSection>
+        <div style={{marginLeft:"12px"}}>
+        {
+          menuProducts.map(
+              menuProduct => <Link key={menuProduct.id} to={'/item/' + menuProduct.id} element={<ProductView />}>
+                <MenuProduct key={menuProduct.id}
+                             text={menuProduct.name}
+                             type={menuProduct.type}
+                             price={menuProduct.basePrice}
+                             imageSrc={menuProduct.image} />
+              </Link>
+          )
+        }
+        </div>
+      </CenteredSection>
     </>
   )
 
