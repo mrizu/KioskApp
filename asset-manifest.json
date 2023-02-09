@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kiosk/static/css/main.061d14ac.css",
+    "main.js": "/kiosk/static/js/main.b17fa712.js",
+    "static/js/787.1236fd91.chunk.js": "/kiosk/static/js/787.1236fd91.chunk.js",
+    "static/media/takeout.png": "/kiosk/static/media/takeout.e5ae3c3955030eb38283.png",
+    "static/media/mcdonaldlogo.png": "/kiosk/static/media/mcdonaldlogo.f6bf141f5bfe714bc9df.png",
+    "index.html": "/kiosk/index.html",
+    "main.061d14ac.css.map": "/kiosk/static/css/main.061d14ac.css.map",
+    "main.b17fa712.js.map": "/kiosk/static/js/main.b17fa712.js.map",
+    "787.1236fd91.chunk.js.map": "/kiosk/static/js/787.1236fd91.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.061d14ac.css",
+    "static/js/main.b17fa712.js"
+  ]
+}
