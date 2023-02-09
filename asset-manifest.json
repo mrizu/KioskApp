@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/kiosk/static/css/main.061d14ac.css",
-    "main.js": "/kiosk/static/js/main.b17fa712.js",
-    "static/js/787.1236fd91.chunk.js": "/kiosk/static/js/787.1236fd91.chunk.js",
-    "static/media/takeout.png": "/kiosk/static/media/takeout.e5ae3c3955030eb38283.png",
-    "static/media/mcdonaldlogo.png": "/kiosk/static/media/mcdonaldlogo.f6bf141f5bfe714bc9df.png",
-    "index.html": "/kiosk/index.html",
-    "main.061d14ac.css.map": "/kiosk/static/css/main.061d14ac.css.map",
-    "main.b17fa712.js.map": "/kiosk/static/js/main.b17fa712.js.map",
-    "787.1236fd91.chunk.js.map": "/kiosk/static/js/787.1236fd91.chunk.js.map"
+    "main.css": "/KioskApp/static/css/main.061d14ac.css",
+    "main.js": "/KioskApp/static/js/main.5085a2c4.js",
+    "static/js/787.1236fd91.chunk.js": "/KioskApp/static/js/787.1236fd91.chunk.js",
+    "static/media/takeout.png": "/KioskApp/static/media/takeout.e5ae3c3955030eb38283.png",
+    "static/media/mcdonaldlogo.png": "/KioskApp/static/media/mcdonaldlogo.f6bf141f5bfe714bc9df.png",
+    "index.html": "/KioskApp/index.html",
+    "main.061d14ac.css.map": "/KioskApp/static/css/main.061d14ac.css.map",
+    "main.5085a2c4.js.map": "/KioskApp/static/js/main.5085a2c4.js.map",
+    "787.1236fd91.chunk.js.map": "/KioskApp/static/js/787.1236fd91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.061d14ac.css",
-    "static/js/main.b17fa712.js"
+    "static/js/main.5085a2c4.js"
   ]
 }
